@@ -25,16 +25,49 @@ A visual and interactive simulation that models the behavior of bees in a hive-b
 
 ---
 
-## 📁 Project Structure
 
-- bee_simulation/
-- |
-- ├── bee.py # Defines Bee behavior and logic
-- ├── hive.py # Handles nectar storage and hive management
-- ├── terrain.py # Generates and manages terrain grid
-- ├── visualizer.py # Real-time simulation visual output
-- ├── main.py # Runs the full simulation
-- ├── requirements.txt # All required Python packages
-- └── README.md # You are here!
+---
 
+## ▶️ How to Run
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/yourusername/bee-simulation.git
+   cd bee-simulation
+2. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+3. **Start Simulation**
+   ```bash
+   python main.py
+
+
+---
+
+## 🔧 Tools & Technologies Used
+
+- **Python 3.11+**
+- `matplotlib` — for visual output
+- `tkinter` — GUI support (underlying)
+- `random` — for bee movement, energy, decisions
+
+---
+
+## 💡 Code Highlights
+
+### 1. Bee Movement Logic
+
+```python
+def step_change(self, hive=None, terrain=None):
+    if self.state == "searching":
+        dx, dy = self.direction
+        self.position = (self.position[0] + dx, self.position[1] + dy)
+        if terrain.get_cell(*self.position) == "F":
+            self.state = "returning"
+```
+Each bee:
+- Picks a direction
+- Moves step-by-step
+- Reacts to what’s in the terrain (flower, water, etc.)
+- Returns to hive if successful
 
