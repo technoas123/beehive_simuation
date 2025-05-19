@@ -27,14 +27,14 @@ A visual and interactive simulation that models the behavior of bees in a hive-b
 
 ## 📁 Project Structure
 
-bee_simulation/
-│
-├── bee.py # Defines Bee behavior and logic
-├── hive.py # Handles nectar storage and hive management
-├── terrain.py # Generates and manages terrain grid
-├── visualizer.py # Real-time simulation visual output
-├── main.py # Runs the full simulation
-├── requirements.txt # All required Python packages
-└── README.md # You are here!
+- bee_simulation/
+- |
+- ├── bee.py # Defines Bee behavior and logic
+- ├── hive.py # Handles nectar storage and hive management
+- ├── terrain.py # Generates and manages terrain grid
+- ├── visualizer.py # Real-time simulation visual output
+- ├── main.py # Runs the full simulation
+- ├── requirements.txt # All required Python packages
+- └── README.md # You are here!
 
 
